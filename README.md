@@ -52,7 +52,7 @@
   View a demonstration of the application:
   <br />
   
-  ![alt text](https://github.com/emilychhun/challenge9readme/blob/main/READMe-generator-emily1.gif "Logo Title Text 1")
+  ![alt text](https://github.com/emilychhun/teamprofilegenerator/blob/main/Team%20Profile%20Generator.gif "Logo Title Text 1")
   
   ## Licence
   📝📑
