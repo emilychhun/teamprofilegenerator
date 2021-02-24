@@ -15,32 +15,33 @@ const render = require('./src/template.js')
 
 
 function addToTeam(){
-    inquirer.prompt([        
- {
-     type: 'input',
-     message: 'What is the name of this team?',
-     name: 'teamTitle',
-     validate:  nameInput1 =>{
-         if (nameInput1){
-             return true;
-         }else{
-         console.log('Please enter your team name!');
-        }
-   }
+inquirer.prompt([        
+{
+ type: 'input',
+ message: 'What is the name of this team?',
+ name: 'teamTitle',
+ validate:  nameInput1 =>{
+ if (nameInput1){
+    return true;
+    }else{
+     console.log('Please enter your team name!');
+}
+}
+},
 
- },
-    {
-        type: 'checkbox',
-        name: 'selectEmployee',
-        message:'Add an employee, or select "finished".',
-        choices : [
-            'Manager',
-            'Engineer',
-            'Intern',
-            'Finish',
-        ]
+    
+{
+ type: 'checkbox',
+ name: 'selectEmployee',
+ message:'Add an employee, or select "finished".',
+ choices : [
+'Manager',
+'Engineer',
+'Intern',
+'Finish', ]
      
-      },
+},
+
 ]).then(function(data){
     let employeeRole = data.selectEmployee;
     if (employeeRole == 'Manager') {
@@ -59,12 +60,10 @@ function addToTeam(){
 });
 }
     
+addToTeam();
+
 function managerInfo(){
     inquirer.prompt([
-
-
-
-
     {
         type: 'input',
         name: 'managerName',
@@ -121,7 +120,7 @@ function managerInfo(){
     type: "list",
     name: "moreMembers",
     message: "Would you like to add more team members?",
-    choices: [
+    choices: [ 
         "yes",
         "no"
     ],
@@ -130,20 +129,21 @@ function managerInfo(){
     
 }
     ]).then(function(data){
+        let manager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice, data.moreMembers);
+        Team.push(manager);
+        console.log(Team);
       
         let moreMembers = data.moreMembers;
         if (moreMembers == 'yes') {
-            console.log('Please, select your new member!');
-
+    
             console.log(addToTeam('Please, select your new member!'));
     
         }
         else if (moreMembers == 'no'){
             console.log("you are done!");
+            buildPage()
         }
-        let manager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice, data.moreMembers);
-        Team.push(manager);
-       
+     
  
        })
     
@@ -153,35 +153,35 @@ function managerInfo(){
 
 
 
-function EngineerInfo(){
-    inquirer.prompt([
+     function EngineerInfo(){
+     inquirer.prompt([
     {
-type: 'input',
-name: 'engineerName',
-message: "what is engineer's name?",
-validate:  nameInput6 =>{
-    if (nameInput6){
+     type: 'input',
+     name: 'engineerName',
+     message: "what is engineer's name?",
+     validate:  nameInput6 =>{
+       if (nameInput6){
         return true;
-    }else{
+       }else{
         console.log("Please enter your engineer's name!");
+       }
     }
-}
-} ,
+     } ,
 
-{
-type: 'input',
-name: 'engineerID',
-message: "what is your ID?",
-validate:  nameInput7 =>{
-    if (nameInput7){
+     {
+     type: 'input',
+      name: 'engineerID',
+      message: "what is your ID?",
+      validate:  nameInput7 =>{
+      if (nameInput7){
         return true;
-    }else{
+     }else{
         console.log("Please enter your engineer's ID!");
     }
-}
-},
-
-{
+    }
+     },
+    
+     {
 type: 'input',
 name: 'engineerEmail',
 message: "what is your Email?",
@@ -191,22 +191,22 @@ validate:  nameInput8 =>{
     }else{
         console.log("Please enter your engineer's Email!");
     }
-}
-},
+    }
+      },
 
-{
-type: 'input',
-name: 'gitHub',
-message: "what is your github Username?",
-validate:  nameInput9 =>{
+    {
+    type: 'input',
+     name: 'gitHub',
+     message: "what is your github Username?",
+     validate:  nameInput9 =>{
     if (nameInput9){
         return true;
     }else{
         console.log("Please enter your engineer's github Username!");
     }
-}
-},
-{
+    }
+     },
+     {
     type: "list",
     name: "moreMembers",
     message: "Would you like to add more team members?",
@@ -214,28 +214,32 @@ validate:  nameInput9 =>{
         "yes",
         "no"
     ],
-}
+    }
 
 
-]).then(function(data){
+    ]).then(function(data){
+    let engineer = new Engineer (data.engineerName, data.engineerID, data.engineerEmail, data.gitHub, data.moreMembers);
+     Team.push(engineer);   
+     console.log(Team);
+
     let moreMembers = data.moreMembers;
     if (moreMembers == 'yes') {
       
-        console.log(addToTeam());
+        
+            console.log(addToTeam('Please, select your new member!'));
+    
 
     }
     else if (moreMembers == 'no'){
         console.log("you are done!");
     }
-    let engineer = new Engineer (data.engineerName, data.engineerID, data.engineerEmail, data.gitHub, data.moreMembers);
-     Team.push(engineer);
-
+    
     })
-}
+   }
 
-function InternInfor(){
-    inquirer.prompt([
-{
+    function InternInfor(){
+    inquirer.prompt([   
+    {
     type: 'input',
     name: 'InternName',
     message: "what is your intern's name?",
@@ -246,9 +250,9 @@ function InternInfor(){
             console.log("Please enter your intern's name!");
         }
     }
- } ,
+    } ,
 
- {
+    {
     type: 'input',
     name: 'InternId',
     message: "what is your intern's Id?",
@@ -259,9 +263,9 @@ function InternInfor(){
             console.log("Please enter your intern's ID!");
         }
     }
- } ,
+    } ,
  
- {
+     {
     type: 'input',
     name: 'InternEmail',
     message: "what is your intern's Email?",
@@ -297,20 +301,22 @@ function InternInfor(){
 }
 
 ]).then(function(data){
+    let intern = new Intern(data.InternName, data.InternId, data.InternEmail, data.school, data.moreMembers);
+    Team.push(intern);
+    console.log(Team);
+
     let moreMembers = data.moreMembers;
     if (moreMembers == 'yes') {
-      
-        console.log(addToTeam());
+     
+        console.log(addToTeam('Please, select your new member!'));
+
 
     }
     else if (moreMembers == 'no'){
         console.log("you are done!");
+        buildPage()
     }
-    let intern = new Intern(data.InternName, data.InternId, data.InternEmail, data.school, data.moreMembers);
-     Team.push(intern);
-     
-     
-
+  
 
 
     })
@@ -333,19 +339,21 @@ function renderTeam(){
 
     ]).then(function(redata){
         let reselect = redata.moreMembers;
+        console.log(reselect)
         if (reselect == 'yes') {
            console.log(addToTeam());
 
         }
-        else if (reselect == 'no'){
+        else{
+            buildPage()
             console.log("you are done!");
-            Finish();
+            
         }
        
     });
     } 
             
-    addToTeam();
+
 
     function buildPage()
     {

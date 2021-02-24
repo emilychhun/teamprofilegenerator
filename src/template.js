@@ -11,8 +11,8 @@ const buildTeam = Team => {
         <div class = "card-body">
         <ul class ="list-group list-group-flush">
         <li class ="list-group-item">Employee ID: ${manager.pushid()}</li>
-        <li class ="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.pushemail()}</a></li>
-       <li class ="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
+        <li class ="list-group-item">Email: <a href="mailto:${manager.pushemail()}">${manager.pushemail()}</a></li>
+       <li class ="list-group-item">Office Number: ${manager.pushofficeNumber()}</li>
         </ul>
         </div>
         </div>
