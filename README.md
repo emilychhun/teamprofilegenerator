@@ -84,7 +84,7 @@
   Email me with any questions: emily_chhun23@yahoo.com
   <br />
 
-  repo link: [readme-repo-link](https://github.com/emilychhun/challenge9readme)
+  repo link: [readme-repo-link](https://github.com/emilychhun/teamprofilegenerator)
   
   <br />
   
