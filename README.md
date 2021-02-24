@@ -4,7 +4,6 @@
 
 ![badge](https://img.shields.io/npm/v/npm.svg?logo=javascript)
 ![badge](https://img.shields.io/npm/v/npm.svg?logo=npm)
-![badge](/packagist/l/:user/:repo?server=https%3A%2F%2Fpackagist.org)
 [![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)
 ![badge](https://img.shields.io/npm/v/npm.svg?logo=javascript)
  <a href="https://twitter.com/jpdewoody">
