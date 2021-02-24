@@ -6,9 +6,7 @@
 ![badge](https://img.shields.io/npm/v/npm.svg?logo=npm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![badge](https://img.shields.io/npm/v/npm.svg?logo=javascript)
- <a href="https://twitter.com/jpdewoody">
-  <img alt="Twitter: jpdewoody" src="https://img.shields.io/twitter/follow/jpdewoody.svg?style=social" target="_blank" />
- </a>
+
 </h1>
 
 ## Description 
