@@ -19,7 +19,7 @@
   
   🔍 This is a software engineering team generator command line application. Users are prompted for information about the team manager and team members. Since testing is a key piece in making code maintainable, I have ensured all unit tests passed.
 
- *Check out the [ExampleREADME.md](https://github.com/emilychhun/challenge9readme/blob/main/demo/DemoREADME.md) as an example.*
+ *Check out the [ExampleREADME.md](https://github.com/emilychhun/teamprofilegenerator/blob/main/README.md) as an example.*
   <br />
  
   ## Table of contents
