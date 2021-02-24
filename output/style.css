@@ -1,17 +1,25 @@
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-
-.card {
-    padding: 20px;
-    border-radius: 6px;
-    background-color: white;
-    color: powderblue;
-    margin: 20px;
-}
-
-
-
-.card {
-    flex: 4;
+  h1 {
     text-align: center;
+    color: white;
+    font-weight: 750;
+    margin: 0;
+    line-height: 1.25;
+    font-family: "IBM Plex Sans", sans-serif;
+    padding: 30px 10px;
+    background-color: rgb(201, 85, 85);
+    margin: 10px; 
 }
 
+.card-header {
+background-color: royalblue;
+margin: 10px;
+gap: 20px;
+
+}
