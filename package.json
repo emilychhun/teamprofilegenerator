@@ -1,0 +1,26 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilychhun/teamprofilegenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilychhun/teamprofilegenerator/issues"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "homepage": "https://github.com/emilychhun/teamprofilegenerator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
